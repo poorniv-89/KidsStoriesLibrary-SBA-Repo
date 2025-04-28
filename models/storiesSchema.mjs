@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const storiesSchema = mongoose.Schema({
     title: {
@@ -27,4 +27,4 @@ const storiesSchema = mongoose.Schema({
     summary: String
 })
 
-export default mongoose.model(Story, storiesSchema);
+export default mongoose.model('Story', storiesSchema);
