@@ -140,63 +140,70 @@ export const stories = [
 //author documents
   export const authors = [
     {
-      name: "Alice Johnson",
-      bio: "Alice loves writing thrilling adventures for young minds.",
-      stories: ["The Adventures of Timmy"],
-      birthDate: new Date("1980-03-15")
-    },
+        name: "Alice Johnson",
+        bio: "Alice loves writing thrilling adventures for young minds.",
+        stories: [
+          "The Adventures of Timmy",
+          "Timmy and the Magical Compass",
+          "Timmy's Return to the Enchanted Forest"
+        ],
+        birthDate: "1980-03-15"
+      },
     {
       name: "Bob Smith",
       bio: "Bob specializes in weaving fantasy worlds full of wonder.",
       stories: ["The Enchanted Forest"],
-      birthDate: new Date("1975-07-22")
+      birthDate: "1975-07-22"
     },
     {
-      name: "Charlie Brown",
-      bio: "Charlie crafts exciting mysteries that spark curiosity.",
-      stories: ["The Mystery of the Lost Treasure"],
-      birthDate: new Date("1982-11-10")
-    },
+        name: "Charlie Brown",
+        bio: "Charlie crafts exciting mysteries that spark curiosity.",
+        stories: [
+          "The Mystery of the Lost Treasure",
+          "The Secret of the Pirate's Map"
+        ],
+        birthDate:"1982-11-10"
+      },
     {
       name: "David Lee",
       bio: "David teaches kids about science through fun stories.",
       stories: ["The Curious Case of Professor P"],
-      birthDate: new Date("1978-05-30")
+      birthDate:"1978-05-30"
     },
     {
       name: "Eva Green",
       bio: "Eva reimagines classic fairy tales with a modern twist.",
       stories: ["Fairy Tales Reimagined"],
-      birthDate: new Date("1985-09-14")
+      birthDate: "1985-09-14"
     },
     {
       name: "Frank White",
       bio: "Frank writes about daring adventures beyond Earth.",
       stories: ["Space Explorers"],
-      birthDate: new Date("1980-04-20") 
+      birthDate:"1980-04-20"
     },
     {
       name: "Grace Kim",
       bio: "Grace loves creating magical fantasy stories for kids.",
       stories: ["The Dragon's Secret"],
-      birthDate: new Date("1987-04-18")
+      birthDate:"1987-04-18"
     },
     {
       name: "Harry Potter",
       bio: "Harry creates fun and mysterious detective stories for young readers.",
       stories: ["Detective Sam and the Case of the Missing Cake"],
-      birthDate: new Date("1976-07-31") 
+      birthDate: "1976-07-31"
     },
     {
       name: "Ivy Zhang",
       bio: "Ivy inspires children with stories about science and nature.",
       stories: ["The Science of Life"],
-      birthDate: new Date("1983-06-21")
+      birthDate:"1983-06-21"
     },
     {
       name: "Jackie Chan",
       bio: "Jackie tells heartwarming fairy tales full of magic and lessons.",
       stories: ["The Fairy Godmother's Wish"],
-      birthDate: new Date("1974-10-07")
+      birthDate:"1974-10-07"
     }
   ];

@@ -3,33 +3,26 @@ import express from 'express';
 import dotenv from 'dotenv';
 import errorHandler from './middlewares/error.mjs';
 import connectDB from './db/conn.mjs';
-import { stories, kids, authors } from './utilities/data.mjs';
-import Author from './models/authorsSchema.mjs';
-import Kid from './models/kidsSchema.mjs';
-import Story from './models/storiesSchema.mjs';
-
+import seedingRoute from './routes/seedingRoute.mjs'
+import kidRoute from './routes/kidRoute.mjs';
+import authorRoute from './routes/authorRoute.mjs';
+import storyRoute from './routes/storyRoute.mjs';
 
 //setups
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3001;
 connectDB();
+
 //middleware
 app.use(express.json());
 
 //routes
-app.get('/seed', async (req, res)=>{
-    //Delete all data
-     await Author.deleteMany({}); 
-     await Kid.deleteMany({}); 
-     await Story.deleteMany({}); 
+app.use('/seed', seedingRoute);
+app.use('/api/stories', storyRoute);
+app.use('/api/kids', kidRoute);
+app.use('/api/authors', authorRoute);
 
-     await Author.create(authors);
-     await Kid.create(kids);
-     await Story.create(stories);
-
-     res.send('Data seeded succesfully!');
-})
 //errorhandling middleware
 app.use(errorHandler);
 
