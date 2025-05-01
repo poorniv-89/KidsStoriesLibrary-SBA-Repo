@@ -3,6 +3,7 @@ import Kid from '../models/kidsSchema.mjs';
 
 const router = express.Router();
 
+//get all kids details
 router.get('/', async(req, res)=>{
     const allKids = await Kid.find({});
     res.json(allKids);
