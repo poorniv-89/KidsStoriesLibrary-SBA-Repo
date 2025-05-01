@@ -11,4 +11,13 @@ router.post('/', async(req, res)=>{
         Details: newAuthor});
 })
 
+//delete author details from DB
+router.delete('/:id', async(req, res)=>{
+    const deletedAuthor = await Author.findByIdAndDelete(req.params.id);
+    res.json({
+        message: "Author deleted from DB!",
+        Details: deletedAuthor
+    })
+})
+
 export default router;
