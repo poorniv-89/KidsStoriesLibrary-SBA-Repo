@@ -2,7 +2,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import errorHandler from './middlewares/error.mjs';
-import connectDB from './db/conn.mjs';
+import connectDB, { createAuthorValidation } from './db/conn.mjs';
 import seedingRoute from './routes/seedingRoute.mjs'
 import kidRoute from './routes/kidRoute.mjs';
 import authorRoute from './routes/authorRoute.mjs';
@@ -12,7 +12,8 @@ import storyRoute from './routes/storyRoute.mjs';
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3001;
-connectDB();
+await connectDB();
+await createAuthorValidation();
 
 //middleware
 app.use(express.json());

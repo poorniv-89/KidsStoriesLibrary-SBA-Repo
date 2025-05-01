@@ -29,7 +29,7 @@ const authorSchemas = mongoose.Schema({
                 // Now check if it’s an actual calendar date
                 const birthDate = new Date(value);
                 if (birthDate.toISOString().slice(0, 10) !== value) {
-                  return false;
+                    return false;
                 }
                 return true;
             },
