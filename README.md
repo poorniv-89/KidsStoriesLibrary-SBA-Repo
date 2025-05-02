@@ -11,7 +11,6 @@ The data is stored and managed using MongoDB and Mongoose which simplifies inter
 
 **Kids:** Read all Kids details and uodate Kids details.
 
-This API helps you easily manage authors, stories, and kids in a library of kids' stories.
 
 | **Collection** | **Operations**           | **Method** | **URL**                                                | **Sample Data**                                         | **Description**                                   |
 |----------------|--------------------------|------------|--------------------------------------------------------|---------------------------------------------------------|---------------------------------------------------|
@@ -21,4 +20,11 @@ This API helps you easily manage authors, stories, and kids in a library of kids
 |                | Read (by ID)             | GET        | `/api/stories/:id`                                      |                                | Retrieves a specific story by its unique ID.     |
 | **Kids**       | Read (all details)       | GET        | `/api/kids`                                            |                | Retrieves details of all kids in the database.   |
 |                | Update (by ID)           | PATCH      | `/api/kids/:id`                                         | `{ "name": "Karl Marx", "age": 10, "favoriteGenre": "Adventure" }` | Updates details of a kid by their unique ID.     |
+
+
+**Were there any requirements that were difficult to implement? What do you think would make them easier to implement in future projects?**
+It was hard to implement validation on birthdates in author schema without using regex, which showed how important it is to have a proper input handling.
+
+**What would you add to or change about your application if given more time?**
+If I had more time, I would add features like user accounts with saved story progress and better search and filtering options.
 
