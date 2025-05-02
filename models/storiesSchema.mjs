@@ -26,5 +26,7 @@ const storiesSchema = mongoose.Schema({
     },
     summary: String
 })
+// Indexing the genre field to query faster by genre
+storiesSchema.index({ genre: 1});
 
 export default mongoose.model('Story', storiesSchema);

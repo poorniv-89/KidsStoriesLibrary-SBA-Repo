@@ -22,7 +22,10 @@ async function connectDB()
 
 export async function createAuthorValidation(){
     const db = mongoose.connection.db;
-
+    const collections = await db.listCollections({ name: 'authors' }).toArray();
+    if (collections.length === 0) {
+      await db.createCollection('authors');
+    }
     await db.command({
         collMod:"authors",
         validator: {
