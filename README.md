@@ -9,7 +9,7 @@ The data is stored and managed using MongoDB and Mongoose which simplifies inter
 
 **Stories:** Read stories by genre and retrieve a story by id.
 
-**Kids:** Read all Kids details and uodate Kids details.
+**Kids:** Read all Kids details and update Kids details.
 
 
 | **Collection** | **Operations**           | **Method** | **URL**                                                | **Sample Data**                                         | **Description**                                   |
